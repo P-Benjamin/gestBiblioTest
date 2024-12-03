@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { BookListComponent } from "./book-list.component";
 import { BookService } from "../../services/book.service";
 
-describe('BookListComponent', () => {
+fdescribe('BookListComponent', () => {
   let component: BookListComponent;
   let fixture: ComponentFixture<BookListComponent>;
   let mockBookService: jasmine.SpyObj<BookService>;
@@ -28,7 +28,7 @@ describe('BookListComponent', () => {
   });
 
   it('devrait afficher les livres', () => {
-    fixture.detectChanges(); // DÃ©clenche l'exÃ©cution d'OnInit
+    fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('li')?.textContent).toContain('Angular Mastery');
   });
